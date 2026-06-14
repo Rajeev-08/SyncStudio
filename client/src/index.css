@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-workspace-bg text-workspace-textActive antialiased selection:bg-workspace-accent/30 selection:text-workspace-textActive overflow-hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar matching professional IDE designs */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-workspace-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-workspace-border rounded-sm hover:bg-workspace-textMuted/40 transition-colors;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-workspace-panel/60 backdrop-blur-md border border-workspace-border;
+  }
+  
+  .ide-input {
+    @apply bg-workspace-bg/80 border border-workspace-border rounded px-3 py-1.5 text-sm text-workspace-textActive placeholder:text-workspace-textMuted focus:outline-none focus:border-workspace-accent transition-colors;
+  }
+
+  .ide-button-primary {
+    @apply bg-workspace-accent hover:bg-workspace-accent/90 text-workspace-bg font-medium px-4 py-1.5 rounded text-sm transition-all shadow-md shadow-workspace-accent/10 active:scale-[0.98];
+  }
+
+  .ide-button-secondary {
+    @apply bg-workspace-border hover:bg-workspace-border/80 text-workspace-textActive font-medium px-4 py-1.5 rounded text-sm border border-workspace-border transition-all active:scale-[0.98];
+  }
+}
