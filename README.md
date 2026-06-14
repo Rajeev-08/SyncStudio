@@ -2,6 +2,10 @@
 
 A collaborative browser-based development workspace designed for real-time **HTML, CSS, and JavaScript** development. SyncStudio enables multiple users to work together on the same project simultaneously while providing live code synchronization, instant preview rendering, version history management, and project collaboration tools.
 
+![SyncStudio Workspace](./screenshot.png)
+
+---
+
 ## Features
 
 ### Real-Time Collaboration
